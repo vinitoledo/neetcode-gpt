@@ -22,4 +22,6 @@ class Solution:
             output = 1/(1 + np.exp(-activ)) 
         elif activation == 'relu':
             output = np.maximum(0,activ)
+        else:
+            raise ValueError("Activation missing or not supported")
         return np.round(output,5)
